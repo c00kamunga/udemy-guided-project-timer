@@ -6,9 +6,15 @@ this.pauseButton = pauseButton;
 
 this.startButton.addEventListener('click', this.start)
     }
-    start(){
-        console.log('time to start the timer')
+    start = () => {
+        this.tick()
+setInterval(this.tick, 1000)
     }
+
+    tick = () => {
+        console.log('tick')
+    }
+
 }
 
 const durationInput = document.querySelector('#duration')
